@@ -87,7 +87,7 @@ docker run -d --network mysql-network --ip 172.28.0.3 -p 8080:8000 yuantuo666/ba
 http://服务器IP:8080/admin
 ```
 
-或可使用docker-compose
+### 使用docker-compose 安装
 1. `cp .example.env .env` 修改env文件
 2. `docker compose up -d` 启动容器
 
