@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - bdwp-db:/var/lib/mysql
+
+  baiduwp-php:
+    image: yuantuo666/baiduwp-php
+    ports:
+      - "8098:8000"
+    env_file:
+      - .env
+    depends_on:
+      - mysql
+
+volumes:
+  bdwp-db:
+
